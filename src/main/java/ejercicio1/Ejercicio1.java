@@ -47,11 +47,7 @@ public class Ejercicio1 {
                 // Metodo newLine() añade salto de línea después de cada fila
                 flujo.newLine();
                 System.out.println("El resultado es: " + resultadoFila);
-                for (int k = 0; k < resultadoFila; k++) {
-                    resultadoTotal += resultadoFila;
-
-                }
-                System.out.println("resultado total " + resultadoTotal);
+                
             }
             // Metodo fluh() guarda cambios en disco 
             flujo.flush();
@@ -79,7 +75,18 @@ public class Ejercicio1 {
                     System.out.print(string + "\t");
                 }
                 System.out.println();
+                for (int i = 0; i < matrizNumeros.length; i++) {
+                for (int j = 0; j < matrizNumeros[i].length; j++) {
+                    resultadoFila += matrizNumeros[i][j];
+                }
+                for (int k = 0; k < resultadoFila; k++) {
+                    resultadoTotal += resultadoFila;
+
+                }
+                }
             }
+                System.out.println("resultado total " + resultadoTotal);
+            
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
