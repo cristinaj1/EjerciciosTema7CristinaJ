@@ -25,29 +25,41 @@ public class Ejercicio1 {
         String[] tokens;
         String linea;
 
-        int matrizNumeros[][] = {{100, 101, 102, 103}, {200, 201, 202, 203}, {300, 301, 302, 303}, {400, 401, 402, 403}};
-
+        int[][] matrizNumeros = new int[5][8];
+        int inicial = 100;
+        int resultadoFila = 0;
+        int resultadoTotal = 0;
+        
         //Para que se cree
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero))) {
             for (int i = 0; i < matrizNumeros.length; i++) {
+                inicial = 100 * (i + 1);
+                matrizNumeros[i][0] = inicial;
+
                 for (int j = 0; j < matrizNumeros[i].length; j++) {
+                    matrizNumeros[i][j] = inicial + j;
                     // Obtengo en un String el elemento int de la matriz
                     tmp = String.valueOf(matrizNumeros[i][j]);
-                    // Si es el último de la fila no pone la coma
-                    if (j == matrizNumeros[i].length - 1) {
-                        // Usamos metodo write() para escribir en el buffer
-                        flujo.write(tmp);
-                    } else {
-                        flujo.write(tmp + "     ");
-                    }
+                    resultadoFila += matrizNumeros[i][j];
+                    flujo.write(tmp + "\t");
                 }
 
                 // Metodo newLine() añade salto de línea después de cada fila
                 flujo.newLine();
+                System.out.println("El resultado es: " + resultadoFila);
+                for (int k = 0; k < resultadoFila; k++) {
+                    resultadoTotal += resultadoFila;
+
+                }
+                System.out.println("resultado total " + resultadoTotal);
             }
             // Metodo fluh() guarda cambios en disco 
             flujo.flush();
             System.out.println("Fichero " + idFichero + " creado correctamente.");
+
+            //Es un try with resources y sirve para cerrar todos los recursos 
+            //que estamos usando cuando acabamos de usarlo(automáticamente)
+            //Debido a que consume espacio y memoria
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

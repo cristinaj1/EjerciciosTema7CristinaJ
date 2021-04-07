@@ -20,29 +20,50 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
     public static void main(String[] args) throws IOException {
-        String idFichero = "numeros.txt";
-        String letra = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        int largo = letra.length();
+        String idFichero = "letras.txt";
         Random rd = new Random();
-        char letraAleatoria;
-        final int NUMERO_LINEA = 50;
         String[] tokens;
         String linea;
 
+        boolean tipoLetra;
+
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero))) {
-            for (int i = 0; i < NUMERO_LINEA; i++) {
-                letraAleatoria = letra.charAt(rd.nextInt(largo));
-                if (letraAleatoria == 'X' || letraAleatoria == 'x') {
-                    flujo.write(letraAleatoria + " , ");
-                    flujo.newLine();
-                } else {
-                    flujo.write(letraAleatoria + " , ");
-                }
-                flujo.flush();
+
+            for (int i = 0; i < 50; i++) {
+
+                String letraFinal;
+                do {
+                    String letras = "abcdefghijklmnñopqrstuvwxyz";
+                    String mayusculas= letras.toUpperCase();
+                    letras+=mayusculas;
+                    int indiceLetraSacar = rd.nextInt(letras.length());
+                    
+                    char letra = letras.charAt(indiceLetraSacar);
+                    letraFinal= Character.toString(letra);
+                    
+                    i++;
+
+                    if(letraFinal.equalsIgnoreCase("x")){
+                        flujo.write(letraFinal);
+                        break;
+                    }
+                    
+                    flujo.write(letraFinal+",");
+                    
+                } while (!letraFinal.equalsIgnoreCase("x"));
+
+                // Metodo newLine() añade salto de línea después de cada fila
+                flujo.newLine();
+                i-=1;
             }
-        } catch (FileNotFoundException e) {
+
+            // Metodo fluh() guarda cambios en disco 
+            flujo.flush();
+            System.out.println("Fichero " + idFichero + " creado correctamente.");
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        
         System.out.println("Leyendo el proyecto " + idFichero);
 
         try ( Scanner datosFichero = new Scanner(new File(idFichero), "UTF-8")) {
