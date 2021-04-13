@@ -1,0 +1,181 @@
+TipoVehiculo:Matricula:Marca:Modelo:Color:Precio:Bastidor:Disponible
+Vehiculo{bastidor=-1533169095698252660, matricula=8992id, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.91019051509475, disponible=true}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=-6871410024545353820, matricula=1419N, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.24267087356087, disponible=true}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=4734624179045307835, matricula=2239Kba, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.53348336826149, disponible=false}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=-7305702361722514770, matricula=0228Vt, marca=Audimodelo=Clásico, color=Negro, tarifa=100.3085289715007, disponible=true}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=-386665163216638478, matricula=1393Fk, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.36710743599798, disponible=false}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=2061763963672262057, matricula=8084`Xp, marca=Seatmodelo=Nuevo, color=Negro, tarifa=100.65509144085446, disponible=false}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=-289802409321087712, matricula=0304l^U, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.09451540529, disponible=true}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=4118061243061027548, matricula=2738NBz, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.8010300297188, disponible=true}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=1608641891500924900, matricula=5202mhT, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.79461478768101, disponible=false}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=6537557148208190929, matricula=6190Yo, marca=Audimodelo=Clásico, color=Rojo, tarifa=100.36698990298054, disponible=false}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=-4429844431375048727, matricula=0081GI, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.42837095909826, disponible=true}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=8039956026699398250, matricula=5107H, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.30941111737722, disponible=true}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=8404247057393322698, matricula=1544UQs, marca=Audimodelo=Clásico, color=Rojo, tarifa=100.02350433524583, disponible=false}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=2081968522400924644, matricula=4578cKa, marca=Seatmodelo=Clásico, color=Negro, tarifa=100.51405740602732, disponible=true}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=8805377204649281389, matricula=6612{, marca=Audimodelo=Nuevo, color=Negro, tarifa=100.32950296640762, disponible=false}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=5176277585435371688, matricula=6685m, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.58408821153101, disponible=false}
+	Turismo{numeroPuertas=1}
+Vehiculo{bastidor=-3101100252180694547, matricula=3300Nlq, marca=Audimodelo=Clásico, color=Blanco, tarifa=100.53881914371091, disponible=false}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=6179271933286421195, matricula=8737FS, marca=Audimodelo=Clásico, color=Blanco, tarifa=100.33986839794999, disponible=true}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=-7315713226270093169, matricula=8313Sr, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.86852599592163, disponible=true}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=4794991524369256109, matricula=7584kT, marca=Seatmodelo=Clásico, color=Negro, tarifa=100.63099167512385, disponible=true}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=2115959733284067418, matricula=8092[R, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.34223570447624, disponible=false}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=489994413236578341, matricula=6268tEs, marca=Seatmodelo=Clásico, color=Rojo, tarifa=100.7646843159499, disponible=true}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=-3264407359893125568, matricula=3046G|J, marca=Seatmodelo=Clásico, color=Rojo, tarifa=100.69565452657945, disponible=true}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=-6633639898412234744, matricula=1242~F, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.11285198171274, disponible=false}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=8039263955530975749, matricula=0519jZ, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.28001437815239, disponible=false}
+	Turismo{numeroPuertas=5}
+Vehiculo{bastidor=-5376396105286910178, matricula=9652rf, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.54953013066479, disponible=true}
+	Turismo{numeroPuertas=3}
+Vehiculo{bastidor=6510293124974875201, matricula=5763cn, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.02793691175101, disponible=false}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=-5853162278106933577, matricula=2349D[}, marca=Seatmodelo=Clásico, color=Blanco, tarifa=100.21808575426043, disponible=false}
+	Turismo{numeroPuertas=1}
+Vehiculo{bastidor=-4911860911207942865, matricula=1142c, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.48762265583692, disponible=true}
+	Turismo{numeroPuertas=4}
+Vehiculo{bastidor=-1516598662334308735, matricula=1017_cJ, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.98591444033205, disponible=true}
+	Turismo{numeroPuertas=2}
+Vehiculo{bastidor=-6029829168701306837, matricula=3233Ni, marca=Audimodelo=Clásico, color=Negro, tarifa=100.05127144749959, disponible=true}
+	Deportivo{cilindrada=5}
+Vehiculo{bastidor=8073309905753034838, matricula=3859mF|, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.28593864694847, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=2964604127175778314, matricula=9918]MN, marca=Audimodelo=Nuevo, color=Negro, tarifa=100.62245037862856, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-7030821850644048372, matricula=1330QV, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.92575322694962, disponible=true}
+	Deportivo{cilindrada=5}
+Vehiculo{bastidor=2722518731847782065, matricula=2481Ldx, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.27418016059713, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-1447869642300337511, matricula=2428{fM, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.25419423450043, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-5161878314496637285, matricula=8838aI\, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.81298129299705, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=1839799047519819525, matricula=3020p, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.4733548274217, disponible=false}
+	Deportivo{cilindrada=5}
+Vehiculo{bastidor=4849466784251915045, matricula=2697, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.38608130134912, disponible=false}
+	Deportivo{cilindrada=2}
+Vehiculo{bastidor=3603176081321571581, matricula=0469_, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.9223978470653, disponible=false}
+	Deportivo{cilindrada=1}
+Vehiculo{bastidor=-6846679306017010463, matricula=4227}q, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.93093654568247, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=-7465540995121251316, matricula=1652i, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.94114362718909, disponible=false}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=-9098224645210787013, matricula=4689hy, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.0907286660349, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=6059392841203477436, matricula=0557_, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.85014672502336, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=-8456105056876875467, matricula=7813S_, marca=Audimodelo=Nuevo, color=Negro, tarifa=100.40495418628238, disponible=false}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=-3090144058755214287, matricula=9559bM, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.13817985648879, disponible=false}
+	Deportivo{cilindrada=2}
+Vehiculo{bastidor=1120489990517270795, matricula=1660dw, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.35108127556146, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-1750439354487320577, matricula=1627zn, marca=Audimodelo=Nuevo, color=Negro, tarifa=100.07816650307153, disponible=true}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-1375349924890598670, matricula=8056gry, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.43113722574317, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=2285246132792083782, matricula=2817Anh, marca=Seatmodelo=Clásico, color=Rojo, tarifa=100.6461389867854, disponible=true}
+	Deportivo{cilindrada=2}
+Vehiculo{bastidor=-1921169595229239974, matricula=2530vtH, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.34376289173973, disponible=true}
+	Deportivo{cilindrada=1}
+Vehiculo{bastidor=-6884695095417470632, matricula=2571nDb, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.5518526241668, disponible=false}
+	Deportivo{cilindrada=5}
+Vehiculo{bastidor=3382215589047542102, matricula=8094jz, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.01623611037208, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=-1902630495740520073, matricula=7419r\T, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.13753376301236, disponible=true}
+	Deportivo{cilindrada=1}
+Vehiculo{bastidor=-4218770379248634854, matricula=6011Rd, marca=Seatmodelo=Clásico, color=Blanco, tarifa=100.98122712335685, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=8000118045698413680, matricula=2434l{, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.31555818545121, disponible=true}
+	Deportivo{cilindrada=3}
+Vehiculo{bastidor=4114069079473964713, matricula=8240Ph[, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.81039828979492, disponible=false}
+	Deportivo{cilindrada=1}
+Vehiculo{bastidor=6811129598655990809, matricula=9557lo, marca=Seatmodelo=Clásico, color=Blanco, tarifa=100.71750998800616, disponible=false}
+	Deportivo{cilindrada=2}
+Vehiculo{bastidor=6426655834695452464, matricula=4260Hq], marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.12264088973173, disponible=true}
+	Deportivo{cilindrada=1}
+Vehiculo{bastidor=3411671533271679741, matricula=6814sJ, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.04463200505126, disponible=false}
+	Deportivo{cilindrada=4}
+Vehiculo{bastidor=-4591943606512098021, matricula=3053Dy, marca=Audimodelo=Clásico, color=Negro, tarifa=100.61886187276397, disponible=true}
+	Furgoneta{carga=836, volumen=304}
+Vehiculo{bastidor=-5514421553697710352, matricula=6868GE, marca=Seatmodelo=Clásico, color=Negro, tarifa=100.50618594045015, disponible=false}
+	Furgoneta{carga=800, volumen=953}
+Vehiculo{bastidor=9133549639596429316, matricula=6318mRB, marca=Audimodelo=Clásico, color=Blanco, tarifa=100.63569455654347, disponible=false}
+	Furgoneta{carga=812, volumen=511}
+Vehiculo{bastidor=-1658064979454468882, matricula=5728_R, marca=Audimodelo=Clásico, color=Blanco, tarifa=100.3483831548942, disponible=false}
+	Furgoneta{carga=148, volumen=796}
+Vehiculo{bastidor=-8294455185963039728, matricula=2008E_, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.02481565798149, disponible=false}
+	Furgoneta{carga=146, volumen=363}
+Vehiculo{bastidor=4230198808120964938, matricula=6346q, marca=Seatmodelo=Clásico, color=Blanco, tarifa=100.51985539522022, disponible=true}
+	Furgoneta{carga=640, volumen=939}
+Vehiculo{bastidor=6427493819353563849, matricula=7199e, marca=Seatmodelo=Nuevo, color=Negro, tarifa=100.88216907665085, disponible=true}
+	Furgoneta{carga=69, volumen=264}
+Vehiculo{bastidor=3924893444238462553, matricula=1578rpH, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.87609942985003, disponible=false}
+	Furgoneta{carga=952, volumen=854}
+Vehiculo{bastidor=-5851592306705066521, matricula=3081E]N, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.29887059860982, disponible=true}
+	Furgoneta{carga=793, volumen=677}
+Vehiculo{bastidor=-2013478856574558442, matricula=2751e}, marca=Audimodelo=Nuevo, color=Blanco, tarifa=100.26929189930559, disponible=false}
+	Furgoneta{carga=300, volumen=410}
+Vehiculo{bastidor=3535919109626430737, matricula=0127Ch, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.83216257490494, disponible=false}
+	Furgoneta{carga=404, volumen=371}
+Vehiculo{bastidor=1575735018386456836, matricula=2799Gif, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.69133964268624, disponible=false}
+	Furgoneta{carga=936, volumen=294}
+Vehiculo{bastidor=3851407863117589728, matricula=1074Wm, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.41841821761015, disponible=false}
+	Furgoneta{carga=110, volumen=922}
+Vehiculo{bastidor=1173473120409055060, matricula=1345wr, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.89793348532608, disponible=true}
+	Furgoneta{carga=773, volumen=103}
+Vehiculo{bastidor=8879407627810790181, matricula=7401jpJ, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.5700809525487, disponible=false}
+	Furgoneta{carga=319, volumen=580}
+Vehiculo{bastidor=1344731078910239048, matricula=1707U, marca=Seatmodelo=Clásico, color=Rojo, tarifa=100.22537370416686, disponible=true}
+	Furgoneta{carga=193, volumen=707}
+Vehiculo{bastidor=-3123673949828770708, matricula=1450ky, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.83890147145397, disponible=false}
+	Furgoneta{carga=513, volumen=809}
+Vehiculo{bastidor=2400747223464981975, matricula=2901\O}, marca=Audimodelo=Clásico, color=Amarillo, tarifa=100.39897581768096, disponible=false}
+	Furgoneta{carga=169, volumen=910}
+Vehiculo{bastidor=-3220257723472861504, matricula=3107wc, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.77847854772588, disponible=true}
+	Furgoneta{carga=565, volumen=766}
+Vehiculo{bastidor=3687421869999486609, matricula=8362{d, marca=Seatmodelo=Clásico, color=Blanco, tarifa=100.15573313284948, disponible=false}
+	Furgoneta{carga=528, volumen=620}
+Vehiculo{bastidor=2261326374479850929, matricula=0975r, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.82902557358985, disponible=false}
+	Furgoneta{carga=82, volumen=466}
+Vehiculo{bastidor=-5491529140413368891, matricula=2026h, marca=Audimodelo=Nuevo, color=Rojo, tarifa=100.55152490349937, disponible=true}
+	Furgoneta{carga=921, volumen=940}
+Vehiculo{bastidor=-1497567851942286445, matricula=7389|H, marca=Seatmodelo=Nuevo, color=Amarillo, tarifa=100.08369518814094, disponible=false}
+	Furgoneta{carga=857, volumen=118}
+Vehiculo{bastidor=6046199098998688738, matricula=7555j, marca=Audimodelo=Clásico, color=Blanco, tarifa=100.18455027826087, disponible=true}
+	Furgoneta{carga=871, volumen=452}
+Vehiculo{bastidor=5011888201083919369, matricula=4032ag, marca=Seatmodelo=Nuevo, color=Negro, tarifa=100.01405413849659, disponible=true}
+	Furgoneta{carga=76, volumen=319}
+Vehiculo{bastidor=-1482296234179233765, matricula=7905_R, marca=Seatmodelo=Nuevo, color=Blanco, tarifa=100.9850087859324, disponible=true}
+	Furgoneta{carga=316, volumen=686}
+Vehiculo{bastidor=3064814715346822082, matricula=7293Tz, marca=Seatmodelo=Nuevo, color=Negro, tarifa=100.24588500065907, disponible=true}
+	Furgoneta{carga=485, volumen=163}
+Vehiculo{bastidor=-3440507472422361010, matricula=0968Bea, marca=Audimodelo=Nuevo, color=Amarillo, tarifa=100.14262033988697, disponible=true}
+	Furgoneta{carga=95, volumen=511}
+Vehiculo{bastidor=-7431300826798767741, matricula=5003]|, marca=Seatmodelo=Nuevo, color=Rojo, tarifa=100.0270009148847, disponible=false}
+	Furgoneta{carga=852, volumen=62}
+Vehiculo{bastidor=7628830290157464615, matricula=7798_`, marca=Seatmodelo=Clásico, color=Amarillo, tarifa=100.567801038975, disponible=false}
+	Furgoneta{carga=391, volumen=424}

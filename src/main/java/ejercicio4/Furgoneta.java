@@ -25,6 +25,7 @@ public class Furgoneta extends Vehiculo {
         this.volumen = 8;
     }
 
+
     public int getCarga() {
         return carga;
     }
