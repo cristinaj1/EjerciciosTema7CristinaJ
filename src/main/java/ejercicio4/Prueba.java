@@ -6,68 +6,54 @@
 package ejercicio4;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
  * @author Cris
  */
 public class Prueba {
-    
-    private Long bastidor;
-    private String matricula;
+
     private static String[] marca = {"Audi", "Seat", "Renault"};
     private static String[] modelo = {"Nuevo", "Clásico", "Semi nuevo(2 años como mucho de antigüedad)"};
     private static String[] color = {"Blanco", "Negro", "Rojo", "Amarillo", "Azul"};
-    private double tarifa;
-    private boolean disponible;
-    //Turismo
-    int numeroPuertas;
-    //Furgo 
-    private int carga; // En kg
-    private int volumen; // En m3
-    //Deportivo 
-    private int cilindrada;
+
     private static ArrayList<Vehiculo> lista = new ArrayList<>();
-    
+
     public static String generarPlaca() {
         String matricula = "";
-// Inicializamos la instancia de la clase Random con la que
-// generaremos el valor aleatorio.
         Random rnd = new Random();
 
 // Creamos un ciclo que se ejecute 7 veces, que corresponden al
 // texto de la matrícula.
         for (int i = 0; i < 7; i++) {
-            // Con este condicional verificamos si estamos en la parte
-            // numérica o alfabética de la matrícula.
-            // Solo debe entrar al condicional si estamos generando los
-            // números de la matrícula.
+            //Para los números
             if (i < 4) {
-                // Con esta instrucción se genera un número aleatorio entre
-                // 0 y 9, no se incluye el 10.
                 matricula += rnd.nextInt(10);
-            } // Entrará en esta parte del condicional cuando estemos generando
-            // las letras de la matrícula.
-            else {
-                // Con esta instrucción se genera un número aleatorio entre
-                // 65 y 90, no se incluye el 91. Luego se convierte a un 
-                // caracter ASCII.
-                matricula += (char) (rnd.nextInt(90-65+1) + 65);
+            } else {
+                //Para las letras
+                matricula += (char) (rnd.nextInt(90 - 65 + 1) + 65);
             }
         }
-        
+
         return matricula;
     }
-    
+
     public static void main(String[] args) {
+        String[] tokens;
+        String linea;
         Random rd = new Random();
+        Boolean disponible = rd.nextBoolean();
         String idFichero = "vehiculos.csv";
-        String tmp;
-        
+
         for (int i = 0; i < 30; i++) {
             //Para el color
             int n = rd.nextInt(4);
@@ -78,9 +64,8 @@ public class Prueba {
             //para el modelo
             int aleatorioModel = rd.nextInt(2);
             String modelito = modelo[aleatorioModel];
-            Vehiculo turismo = new Turismo(rd.nextInt(5 - 1 + 1) + 1, rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, rd.nextBoolean());
+            Vehiculo turismo = new Turismo(rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, disponible, 5);
             lista.add(turismo);
-            System.out.println(turismo);
         }
         for (int i = 0; i < 30; i++) {
             //Para el color
@@ -92,9 +77,8 @@ public class Prueba {
             //para el modelo
             int aleatorioModel = rd.nextInt(2);
             String modelito = modelo[aleatorioModel];
-            Vehiculo deportivo = new Deportivo(rd.nextInt(5 - 1 + 1) + 1, rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, rd.nextBoolean());
+            Vehiculo deportivo = new Deportivo(rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, disponible, rd.nextInt(5 - 1 + 1) + 1);
             lista.add(deportivo);
-            System.out.println(deportivo);
         }
         for (int i = 0; i < 30; i++) {
             //Para el color
@@ -106,42 +90,84 @@ public class Prueba {
             //para el modelo
             int aleatorioModel = rd.nextInt(2);
             String modelito = modelo[aleatorioModel];
-            Vehiculo furgo = new Furgoneta(rd.nextInt(1000 - 1 + 1) + 1, rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, rd.nextBoolean());
+            Vehiculo furgo = new Furgoneta(rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, disponible, rd.nextInt(1000 - 1 + 1) + 1);
             lista.add(furgo);
-            System.out.println(furgo);
         }
+
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero))) {
-            
-            flujo.write("TipoVehiculo:Matricula:Marca:Modelo:Color:Precio:Bastidor:Disponible");
+            flujo.write("TipoVehiculo:Matricula:Marca:Modelo:Color:Precio:Bastidor:Disponible:Especifico");
             flujo.newLine();
 
-            for (Vehiculo lib : lista) {
-
-                //En estos dos if dentro se realiza conversion explicita
-                if (lib instanceof Turismo) {
-
-                    flujo.write(((Turismo) lib).toString());
-
+            for (Vehiculo coche : lista) {
+                //Para saber a cual pertenece
+                if (coche instanceof Turismo) {
+                    flujo.write(((Turismo) coche).toString());
+                } else if (coche instanceof Deportivo) {
+                    flujo.write(((Deportivo) coche).toString());
+                } else if (coche instanceof Furgoneta) {
+                    flujo.write(((Furgoneta) coche).toString());
                 }
-
-                if (lib instanceof Deportivo) {
-
-                    flujo.write(((Deportivo) lib).toString());
-                }
-
-                if (lib instanceof Furgoneta) {
-
-                    flujo.write(((Furgoneta) lib).toString());
-                }
-                //añade salto de línea
                 flujo.newLine();
             }
-            // guarda cambios en disco 
             flujo.flush();
             System.out.println("Fichero " + idFichero + " creado correctamente.");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        
+        //Lectura(Ejercicio 7)
+        ArrayList<Vehiculo> lista2 = new ArrayList<>();
+
+        try ( Scanner datosFichero = new Scanner(new File(idFichero),"UTF-8")) {
+            System.out.println("hey");
+            datosFichero.nextLine();
+            while (datosFichero.hasNextLine()) {
+                
+                System.out.println("yuju");
+                linea = datosFichero.nextLine();
+                tokens = linea.split(";");
+                Vehiculo tmp = new Vehiculo();
+                
+                for (String coche : tokens) {
+                    if (tmp instanceof Turismo) {
+                        ((Turismo) tmp).setMatricula(tokens[1]);
+                        ((Turismo) tmp).setMarca(tokens[2]);
+                        ((Turismo) tmp).setModelo(tokens[3]);
+                        ((Turismo) tmp).setColor(tokens[4]);
+                        ((Turismo) tmp).setTarifa(Double.parseDouble(tokens[5]));
+                        ((Turismo) tmp).setBastidor(Long.parseLong(tokens[6]));
+                        ((Turismo) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
+                        ((Turismo) tmp).setNumeroPuertas(Integer.parseInt(tokens[8]));
+                    } else if (tmp instanceof Deportivo) {
+                        ((Deportivo) tmp).setMatricula(tokens[1]);
+                        ((Deportivo) tmp).setMarca(tokens[2]);
+                        ((Deportivo) tmp).setModelo(tokens[3]);
+                        ((Deportivo) tmp).setColor(tokens[4]);
+                        ((Deportivo) tmp).setTarifa(Double.parseDouble(tokens[5]));
+                        ((Deportivo) tmp).setBastidor(Long.parseLong(tokens[6]));
+                        ((Deportivo) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
+                    } else if (tmp instanceof Furgoneta) {
+                        ((Furgoneta) tmp).setMatricula(tokens[1]);
+                        ((Furgoneta) tmp).setMarca(tokens[2]);
+                        ((Furgoneta) tmp).setModelo(tokens[3]);
+                        ((Furgoneta) tmp).setColor(tokens[4]);
+                        ((Furgoneta) tmp).setTarifa(Double.parseDouble(tokens[5]));
+                        ((Furgoneta) tmp).setBastidor(Long.parseLong(tokens[6]));
+                        ((Furgoneta) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
+                    }
+
+                }
+                System.out.println();
+                lista2.add(tmp);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        for (Vehiculo c : lista2) {
+           
+            System.out.println(lista2);
+        }
+
     }
-    
+
 }

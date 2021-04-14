@@ -13,7 +13,7 @@ public class Furgoneta extends Vehiculo {
 
     private int carga; // En kg
 
-    public Furgoneta(int carga, Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, boolean disponible) {
+    public Furgoneta(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, boolean disponible, int carga) {
         super(bastidor, matricula, marca, modelo, color, tarifa, disponible);
         this.carga = carga;
     }
@@ -22,7 +22,6 @@ public class Furgoneta extends Vehiculo {
         this.carga = 1000;
     }
 
-
     public int getCarga() {
         return carga;
     }
@@ -30,7 +29,6 @@ public class Furgoneta extends Vehiculo {
     public void setCarga(int carga) {
         this.carga = carga;
     }
-
 
     @Override
     public String toString() {

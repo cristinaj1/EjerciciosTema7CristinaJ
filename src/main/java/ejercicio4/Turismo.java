@@ -15,8 +15,8 @@ public class Turismo extends Vehiculo {
     private int numeroPuertas;
 
     // Constructor con parámetros. Recibe todos los parámetros de clase hija y padre
-    public Turismo(int numeroPuertas, Long bastidor, String matricula,
-            String marca, String modelo, String color, double tarifa, boolean disponible) {
+    public Turismo(Long bastidor, String matricula,
+            String marca, String modelo, String color, double tarifa, boolean disponible, int numeroPuertas) {
         // Primera línea de código de un constructor clase hija es llamar al constructor padre
         super(bastidor, matricula, marca, modelo, color, tarifa, disponible);
         // Inicialización de atributos propios de la subclase
@@ -25,7 +25,6 @@ public class Turismo extends Vehiculo {
     }
 
     // Sobrescribir el método toString
-
     @Override
     public String toString() {
         return "0:" + super.toString() + ":" + numeroPuertas;
@@ -76,6 +75,5 @@ public class Turismo extends Vehiculo {
 
         return true;
     }
-    
 
 }
