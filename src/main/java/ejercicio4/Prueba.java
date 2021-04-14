@@ -56,7 +56,7 @@ public class Prueba {
                 // Con esta instrucción se genera un número aleatorio entre
                 // 65 y 90, no se incluye el 91. Luego se convierte a un 
                 // caracter ASCII.
-                matricula += (char) (rnd.nextInt(91) + 65);
+                matricula += (char) (rnd.nextInt(90-65+1) + 65);
             }
         }
         
@@ -106,7 +106,7 @@ public class Prueba {
             //para el modelo
             int aleatorioModel = rd.nextInt(2);
             String modelito = modelo[aleatorioModel];
-            Vehiculo furgo = new Furgoneta(rd.nextInt(1000 - 1 + 1) + 1, rd.nextInt(1000 - 1 + 1) + 1, rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, rd.nextBoolean());
+            Vehiculo furgo = new Furgoneta(rd.nextInt(1000 - 1 + 1) + 1, rd.nextLong(), generarPlaca(), marquita, modelito, colorcito, rd.nextDouble() + 100, rd.nextBoolean());
             lista.add(furgo);
             System.out.println(furgo);
         }

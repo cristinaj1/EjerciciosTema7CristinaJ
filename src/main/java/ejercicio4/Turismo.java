@@ -25,9 +25,10 @@ public class Turismo extends Vehiculo {
     }
 
     // Sobrescribir el método toString
+
     @Override
     public String toString() {
-        return super.toString() + "\n\tTurismo{" + "numeroPuertas=" + numeroPuertas + '}';
+        return "0:" + super.toString() + ":" + numeroPuertas;
     }
 
     public Turismo() {
@@ -75,5 +76,6 @@ public class Turismo extends Vehiculo {
 
         return true;
     }
+    
 
 }

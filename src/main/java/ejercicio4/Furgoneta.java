@@ -12,17 +12,14 @@ package ejercicio4;
 public class Furgoneta extends Vehiculo {
 
     private int carga; // En kg
-    private int volumen; // En m3
 
-    public Furgoneta(int carga, int volumen, Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, boolean disponible) {
+    public Furgoneta(int carga, Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, boolean disponible) {
         super(bastidor, matricula, marca, modelo, color, tarifa, disponible);
         this.carga = carga;
-        this.volumen = volumen;
     }
 
     public Furgoneta() {
         this.carga = 1000;
-        this.volumen = 8;
     }
 
 
@@ -34,17 +31,10 @@ public class Furgoneta extends Vehiculo {
         this.carga = carga;
     }
 
-    public int getVolumen() {
-        return volumen;
-    }
-
-    public void setVolumen(int volumen) {
-        this.volumen = volumen;
-    }
 
     @Override
     public String toString() {
-        return super.toString() + "\n\tFurgoneta{" + "carga=" + carga + ", volumen=" + volumen + '}';
+        return "2:" + super.toString() + ":" + carga;
     }
 
     public void metodoFurgoneta() {

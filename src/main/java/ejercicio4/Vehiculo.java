@@ -23,7 +23,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "bastidor=" + bastidor + ", matricula=" + matricula + ", marca=" + marca + "modelo=" + modelo + ", color=" + color + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
+        return matricula + ":" + marca + ":" + modelo + ":" + color + ":" + tarifa + ':' + bastidor;
     }
 
     @Override
