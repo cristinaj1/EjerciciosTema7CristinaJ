@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -114,60 +115,66 @@ public class Prueba {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        
+
         //Lectura(Ejercicio 7)
         ArrayList<Vehiculo> lista2 = new ArrayList<>();
+        System.out.println("Leyendo el fichero: " + idFichero);
+        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
 
-        try ( Scanner datosFichero = new Scanner(new File(idFichero),"UTF-8")) {
-            System.out.println("hey");
             datosFichero.nextLine();
-            while (datosFichero.hasNextLine()) {
-                
-                System.out.println("yuju");
-                linea = datosFichero.nextLine();
-                tokens = linea.split(";");
-                Vehiculo tmp = new Vehiculo();
-                
-                for (String coche : tokens) {
-                    if (tmp instanceof Turismo) {
-                        ((Turismo) tmp).setMatricula(tokens[1]);
-                        ((Turismo) tmp).setMarca(tokens[2]);
-                        ((Turismo) tmp).setModelo(tokens[3]);
-                        ((Turismo) tmp).setColor(tokens[4]);
-                        ((Turismo) tmp).setTarifa(Double.parseDouble(tokens[5]));
-                        ((Turismo) tmp).setBastidor(Long.parseLong(tokens[6]));
-                        ((Turismo) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
-                        ((Turismo) tmp).setNumeroPuertas(Integer.parseInt(tokens[8]));
-                    } else if (tmp instanceof Deportivo) {
-                        ((Deportivo) tmp).setMatricula(tokens[1]);
-                        ((Deportivo) tmp).setMarca(tokens[2]);
-                        ((Deportivo) tmp).setModelo(tokens[3]);
-                        ((Deportivo) tmp).setColor(tokens[4]);
-                        ((Deportivo) tmp).setTarifa(Double.parseDouble(tokens[5]));
-                        ((Deportivo) tmp).setBastidor(Long.parseLong(tokens[6]));
-                        ((Deportivo) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
-                    } else if (tmp instanceof Furgoneta) {
-                        ((Furgoneta) tmp).setMatricula(tokens[1]);
-                        ((Furgoneta) tmp).setMarca(tokens[2]);
-                        ((Furgoneta) tmp).setModelo(tokens[3]);
-                        ((Furgoneta) tmp).setColor(tokens[4]);
-                        ((Furgoneta) tmp).setTarifa(Double.parseDouble(tokens[5]));
-                        ((Furgoneta) tmp).setBastidor(Long.parseLong(tokens[6]));
-                        ((Furgoneta) tmp).setDisponible(Boolean.parseBoolean(tokens[7]));
-                    }
 
+            while (datosFichero.hasNextLine()) {
+
+                linea = datosFichero.nextLine();
+                tokens = linea.split(":");
+
+                switch (Integer.parseInt(tokens[0])) { //swicht permite string(atenta porque puede servir)
+                    case 0:
+                        Turismo t1 = new Turismo();
+                        t1.setMatricula(tokens[1]);
+                        t1.setMarca(tokens[2]);
+                        t1.setModelo(tokens[3]);
+                        t1.setColor(tokens[4]);
+                        t1.setTarifa(Double.parseDouble(tokens[5]));
+                        t1.setBastidor(Long.parseLong(tokens[6]));
+                        t1.setDisponible(Boolean.parseBoolean(tokens[7]));
+                        t1.setNumeroPuertas(Integer.parseInt(tokens[8]));
+                        lista2.add(t1);
+                        break;
+                    case 1:
+                        Deportivo d1 = new Deportivo();
+                        d1.setMatricula(tokens[1]);
+                        d1.setMarca(tokens[2]);
+                        d1.setModelo(tokens[3]);
+                        d1.setColor(tokens[4]);
+                        d1.setTarifa(Double.parseDouble(tokens[5]));
+                        d1.setBastidor(Long.parseLong(tokens[6]));
+                        d1.setDisponible(Boolean.parseBoolean(tokens[7]));
+                        d1.setCilindrada(Integer.parseInt(tokens[8]));
+                        lista2.add(d1);
+                        break;
+                    case 2:
+                        Furgoneta f1 = new Furgoneta();
+                        f1.setMatricula(tokens[1]);
+                        f1.setMarca(tokens[2]);
+                        f1.setModelo(tokens[3]);
+                        f1.setColor(tokens[4]);
+                        f1.setTarifa(Double.parseDouble(tokens[5]));
+                        f1.setBastidor(Long.parseLong(tokens[6]));
+                        f1.setDisponible(Boolean.parseBoolean(tokens[7]));
+                        f1.setCarga(Integer.parseInt(tokens[8]));
+                        lista2.add(f1);
+                        break;
                 }
-                System.out.println();
-                lista2.add(tmp);
             }
+
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
-        for (Vehiculo c : lista2) {
-           
-            System.out.println(lista2);
-        }
 
+        for (Vehiculo lista : lista2) {
+            System.out.println(lista);
+        }
     }
 
 }
