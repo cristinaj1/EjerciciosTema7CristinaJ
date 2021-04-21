@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,6 +29,9 @@ public class Prueba {
     private static String[] color = {"Blanco", "Negro", "Rojo", "Amarillo", "Azul"};
 
     private static ArrayList<Vehiculo> lista = new ArrayList<>();
+    private static ArrayList<Vehiculo> listaD = new ArrayList<>();
+    private static ArrayList<Vehiculo> listaT = new ArrayList<>();
+    private static ArrayList<Vehiculo> listaF = new ArrayList<>();
 
     public static String generarPlaca() {
         String matricula = "";
@@ -46,6 +50,72 @@ public class Prueba {
         }
 
         return matricula;
+    }
+
+    private static void escribirDeportivo(ArrayList<Vehiculo> a) {
+        ArrayList<Vehiculo> depor = new ArrayList<>(listaD);
+        String idFichero2 = "Deportivos.csv";
+        
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
+            flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
+            flujo.newLine();
+            for (int i = 0; i < a.size(); i++) {
+                flujo.write(a.get(i).getColor() + ",");
+                flujo.write(a.get(i).getMarca() + ",");
+                flujo.write(a.get(i).getMatricula() + ",");
+                flujo.write(a.get(i).getModelo() + ",");
+                flujo.write(a.get(i).getBastidor() + ",");
+                flujo.write(a.get(i).getTarifa() + ",");
+                flujo.newLine();
+            }
+            flujo.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void escribirFurgoneta(ArrayList<Vehiculo> a) {
+        ArrayList<Vehiculo> depor = new ArrayList<>(listaF);
+        String idFichero2 = "Furgonetas.csv";
+        
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
+            flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
+            flujo.newLine();
+            for (int i = 0; i < a.size(); i++) {
+                flujo.write(a.get(i).getColor() + ",");
+                flujo.write(a.get(i).getMarca() + ",");
+                flujo.write(a.get(i).getMatricula() + ",");
+                flujo.write(a.get(i).getModelo() + ",");
+                flujo.write(a.get(i).getBastidor() + ",");
+                flujo.write(a.get(i).getTarifa() + ",");
+                flujo.newLine();
+            }
+            flujo.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void escribirTurismo(ArrayList<Vehiculo> a) {
+        ArrayList<Vehiculo> depor = new ArrayList<>(listaT);
+        String idFichero2 = "Turismos.csv";
+        
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
+            flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
+            flujo.newLine();
+            for (int i = 0; i < a.size(); i++) {
+                flujo.write(a.get(i).getColor() + ",");
+                flujo.write(a.get(i).getMarca() + ",");
+                flujo.write(a.get(i).getMatricula() + ",");
+                flujo.write(a.get(i).getModelo() + ",");
+                flujo.write(a.get(i).getBastidor() + ",");
+                flujo.write(a.get(i).getTarifa() + ",");
+                flujo.newLine();
+            }
+            flujo.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static void main(String[] args) {
@@ -118,6 +188,7 @@ public class Prueba {
 
         //Lectura(Ejercicio 7)
         ArrayList<Vehiculo> lista2 = new ArrayList<>();
+
         System.out.println("Leyendo el fichero: " + idFichero);
         try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
 
@@ -139,6 +210,7 @@ public class Prueba {
                         t1.setBastidor(Long.parseLong(tokens[6]));
                         t1.setDisponible(Boolean.parseBoolean(tokens[7]));
                         t1.setNumeroPuertas(Integer.parseInt(tokens[8]));
+                        listaT.add(t1);
                         lista2.add(t1);
                         break;
                     case 1:
@@ -151,6 +223,7 @@ public class Prueba {
                         d1.setBastidor(Long.parseLong(tokens[6]));
                         d1.setDisponible(Boolean.parseBoolean(tokens[7]));
                         d1.setCilindrada(Integer.parseInt(tokens[8]));
+                        listaD.add(d1);
                         lista2.add(d1);
                         break;
                     case 2:
@@ -163,6 +236,7 @@ public class Prueba {
                         f1.setBastidor(Long.parseLong(tokens[6]));
                         f1.setDisponible(Boolean.parseBoolean(tokens[7]));
                         f1.setCarga(Integer.parseInt(tokens[8]));
+                        listaF.add(f1);
                         lista2.add(f1);
                         break;
                 }
@@ -172,9 +246,22 @@ public class Prueba {
             System.out.println(e.getMessage());
         }
 
+        
         for (Vehiculo lista : lista2) {
             System.out.println(lista);
         }
+        for (Vehiculo lista : listaD) {
+            System.out.println(lista);
+            escribirDeportivo(listaD);
+        }
+        for (Vehiculo lista : listaT) {
+            System.out.println(lista);
+            escribirFurgoneta(listaT);
+        }
+        for (Vehiculo lista : listaF) {
+            System.out.println(lista);
+            escribirTurismo(listaF);
+        }
+        
     }
-
 }
