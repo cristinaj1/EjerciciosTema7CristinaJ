@@ -246,7 +246,7 @@ public class Prueba {
             System.out.println(e.getMessage());
         }
 
-        
+        //Ejercicio 9B
         for (Vehiculo lista : lista2) {
             System.out.println(lista);
         }
