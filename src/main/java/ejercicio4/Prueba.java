@@ -51,9 +51,8 @@ public class Prueba {
 
         return matricula;
     }
-
+    //Es el ejercicio 9B
     private static void escribirDeportivo(ArrayList<Vehiculo> a) {
-        ArrayList<Vehiculo> depor = new ArrayList<>(listaD);
         String idFichero2 = "Deportivos.csv";
         
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
@@ -75,7 +74,6 @@ public class Prueba {
     }
 
     private static void escribirFurgoneta(ArrayList<Vehiculo> a) {
-        ArrayList<Vehiculo> depor = new ArrayList<>(listaF);
         String idFichero2 = "Furgonetas.csv";
         
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
@@ -97,7 +95,6 @@ public class Prueba {
     }
 
     private static void escribirTurismo(ArrayList<Vehiculo> a) {
-        ArrayList<Vehiculo> depor = new ArrayList<>(listaT);
         String idFichero2 = "Turismos.csv";
         
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
@@ -191,11 +188,8 @@ public class Prueba {
 
         System.out.println("Leyendo el fichero: " + idFichero);
         try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
-
             datosFichero.nextLine();
-
             while (datosFichero.hasNextLine()) {
-
                 linea = datosFichero.nextLine();
                 tokens = linea.split(":");
 
