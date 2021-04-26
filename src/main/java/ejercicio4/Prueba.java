@@ -15,8 +15,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -51,10 +53,11 @@ public class Prueba {
 
         return matricula;
     }
+
     //Es el ejercicio 9B
     private static void escribirDeportivo(ArrayList<Vehiculo> a) {
         String idFichero2 = "Deportivos.csv";
-        
+
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
             flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
             flujo.newLine();
@@ -75,7 +78,7 @@ public class Prueba {
 
     private static void escribirFurgoneta(ArrayList<Vehiculo> a) {
         String idFichero2 = "Furgonetas.csv";
-        
+
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
             flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
             flujo.newLine();
@@ -96,7 +99,7 @@ public class Prueba {
 
     private static void escribirTurismo(ArrayList<Vehiculo> a) {
         String idFichero2 = "Turismos.csv";
-        
+
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
             flujo.write("Color,Marca,Matricula,Modelo,Bastidor,Tarifa");
             flujo.newLine();
@@ -256,6 +259,28 @@ public class Prueba {
             System.out.println(lista);
             escribirTurismo(listaF);
         }
+        lista2.stream()
+                .filter(v -> v.getColor().equalsIgnoreCase("negro"))
+                .distinct()//Diferencia objetos del array
+                .sorted((v1, v2) -> v1.getMatricula().compareTo(v2.getMatricula()))
+                .forEach(System.out::println);
+
+        System.out.println("\nLos vehiculos no disponibles son:");
+        lista2.stream()
+                .filter(v -> v.isDisponible() != true)
+                .map(d -> d.getMarca())
+                .distinct()
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
         
+        //Cuenta las marcas repetidas
+        long cantidadMarca = lista2.stream()
+                .filter(p -> p.getMarca().equalsIgnoreCase("Renault"))
+                .count();
+        System.out.println("\nEl número de coches Renault son: " + cantidadMarca);
+
+        boolean seat = lista2.stream().anyMatch((p) -> p.getMarca().equalsIgnoreCase("Seat") && p.getColor().equalsIgnoreCase("Negro") && p.isDisponible());
+
+        System.out.println("Hay algun seat negro :" + seat);
     }
 }

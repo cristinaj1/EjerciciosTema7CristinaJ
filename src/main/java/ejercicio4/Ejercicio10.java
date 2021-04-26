@@ -24,26 +24,23 @@ import java.util.Scanner;
  */
 public class Ejercicio10 {public static void main(String[] args) {
         
-        // Copiar los tres ficheros a un directorio previamente creado en â€œ./copiasâ€�.
         // Creo el directorio
         crearDirectorio("./copias");
         // Copio los archivos a la nueva ruta
-        copiarFicheros("./turismo.csv", "./copias/turismo.csv");
-        copiarFicheros("./deportivo.csv", "./copias/deportivo.csv");
-        copiarFicheros("./furgoneta.csv", "./copias/furgoneta.csv");
+        copiarFicheros("./Turismos.csv", "./copias/Turismos.csv");
+        copiarFicheros("./Deportivos.csv", "./copias/Deportivos.csv");
+        copiarFicheros("./Furgonetas.csv", "./copias/Furgonetas.csv");
         
-        // Mostrar por consola el nombre de los ficheros contenidos en â€œcopiasâ€�.
         listarDirectorio("./copias");
         
-        // Leer los ficheros de la carpeta â€œcopiasâ€� e ir guardando los objetos 
-        // en una lista de VehÃ­culos e imprimir la lista por pantalla. 
-        leerFicheros("./copias/turismo.csv");
-        leerFicheros("./copias/deportivo.csv");
-        leerFicheros("./copias/furgoneta.csv");
+        leerFicheros("./copias/Turismos.csv");
+        leerFicheros("./copias/Deportivos.csv");
+        leerFicheros("./copias/Furgonetas.csv");
         
-        borrarElemento("./turismo.csv");
-        borrarElemento("./deportivo.csv");
-        borrarElemento("./furgoneta.csv");
+        borrarElemento("./Turismos.csv");
+        borrarElemento("./Deportivos.csv");
+        borrarElemento("./Furgonetas.csv");
+        
     }
     
     public static void crearDirectorio(String ruta) {
@@ -57,7 +54,7 @@ public class Ejercicio10 {public static void main(String[] args) {
             System.out.println("No tiene permisos para crear " + ruta);
         } catch (IOException e) {
             System.out.println("Problema creando el directorio " + ruta);
-            System.out.println("Seguramente la ruta estÃ¡ mal escrita o no existe");
+            System.out.println("Seguramente la ruta está mal escrita o no existe");
         }
 
     }
@@ -75,11 +72,9 @@ public class Ejercicio10 {public static void main(String[] args) {
     
     public static void listarDirectorio(String ruta) {
 
-        File f = new File(ruta);
-        if (f.exists()) {
-            // Obtiene los ficheros y directorios dentro de f y los 
-            // devuelve en un array
-            File[] ficheros = f.listFiles();
+        File file = new File(ruta);
+        if (file.exists()) {
+            File[] ficheros = file.listFiles();
             for (File file2 : ficheros) {
                 System.out.println(file2.getName());
             }
@@ -91,7 +86,6 @@ public class Ejercicio10 {public static void main(String[] args) {
     public static void leerFicheros (String idFichero){
         System.out.println("Leyendo el fichero: " + idFichero);
 
-        // Variables para guardar los datos que se van leyendo
         String[] tokens;
         String linea;
         ArrayList <Vehiculo> vehiculos = new ArrayList<>();
@@ -104,19 +98,15 @@ public class Ejercicio10 {public static void main(String[] args) {
                 Vehiculo tmp;
                 switch (tokens[0]) {
                 case "0":
-			// Turismo
 			tmp = new Turismo();
 			break;
 		case "1":
-			// Deportivo
 			tmp = new Deportivo();
 			break;
                 default:
-                    // Furgoneta
                     tmp = new Furgoneta();
                     break;
 		}
-                // Saltamos el 0 por ser el tipo de vehiculo
 		tmp.setBastidor(Long.parseLong(tokens[1]));
 		tmp.setMatricula(tokens[2]);
 		tmp.setMarca(tokens[3]);
